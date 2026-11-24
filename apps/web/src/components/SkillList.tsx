@@ -15,7 +15,7 @@ export default function SkillList() {
       <h2 className="section-title">{sections.skillsTitle}</h2>
       <p className="section-subtitle">{sections.skillsSubtitle}</p>
       <ul className="skill-list">
-        {skills.map((s) => (
+        {Array.isArray(skills) && skills.map((s) => (
           <li key={s.name} className="skill-item">
             <span className="skill-name">{s.name}</span>
             <span className={`skill-level skill-level-${s.level}`} data-level={s.level}>
