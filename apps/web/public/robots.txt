@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://kelianc.eu/sitemap.xml

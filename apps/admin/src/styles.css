@@ -1,0 +1,29 @@
+:root { color-scheme: light; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background: #f6f4ef; color: #26211b; }
+.loading { padding: 2rem; text-align: center; }
+.login-wrap { min-height: 100vh; display: grid; place-items: center; }
+.login-card { background: #fff; border: 1px solid #e4dccf; border-radius: 12px; padding: 2rem; width: min(360px, 90vw); display: flex; flex-direction: column; gap: 1rem; }
+.login-card h1 { margin: 0; font-size: 1.4rem; }
+label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.9rem; font-weight: 600; }
+input, textarea, select { font: inherit; padding: 0.45rem 0.6rem; border: 1px solid #d8d0c0; border-radius: 8px; background: #fffdf9; color: inherit; }
+textarea { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 0.85rem; }
+button { font: inherit; padding: 0.45rem 0.9rem; border-radius: 8px; border: 1px solid #d8d0c0; background: #fff; cursor: pointer; }
+button:hover { border-color: #b4552d; color: #8f3f1f; }
+button:disabled { opacity: 0.5; cursor: default; }
+.error { color: #b3372c; }
+.dash-header { display: flex; align-items: center; gap: 1rem; padding: 0.8rem 1.25rem; background: #fff; border-bottom: 1px solid #e4dccf; position: sticky; top: 0; flex-wrap: wrap; }
+.tab { border: none; background: none; font-weight: 600; color: #5c554a; }
+.tab.active { color: #8f3f1f; text-decoration: underline; }
+main { padding: 1.5rem 1.25rem 4rem; max-width: 1100px; margin: 0 auto; }
+.toast { position: fixed; bottom: 1rem; right: 1rem; background: #26211b; color: #faf7f2; padding: 0.6rem 1rem; border-radius: 8px; }
+.split { display: grid; grid-template-columns: 260px 1fr; gap: 1.5rem; align-items: start; }
+.key-list { list-style: none; padding: 0; margin: 0.8rem 0 0; display: flex; flex-direction: column; gap: 0.3rem; }
+.key-list li { display: flex; gap: 0.3rem; }
+.key { flex: 1; text-align: left; font-family: ui-monospace, Menlo, monospace; font-size: 0.82rem; }
+.key.active { border-color: #b4552d; color: #8f3f1f; }
+.danger { color: #b3372c; }
+.editor { background: #fff; border: 1px solid #e4dccf; border-radius: 12px; padding: 1.2rem; display: flex; flex-direction: column; gap: 0.8rem; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+.media-list { list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.4rem; }
+@media (max-width: 800px) { .split { grid-template-columns: 1fr; } .two-col { grid-template-columns: 1fr; } }
