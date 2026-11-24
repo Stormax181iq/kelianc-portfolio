@@ -1,0 +1,29 @@
+[
+  {
+    "name": "parloir-blog",
+    "fullName": "Stormax181iq/parloir-blog",
+    "description": "Personal blog engine built with the PERN stack (PostgreSQL, Express, React, Node.js) in TypeScript.",
+    "url": "https://github.com/Stormax181iq/parloir-blog",
+    "language": "TypeScript",
+    "stars": 0,
+    "updatedAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "name": "single-page-site-builder",
+    "fullName": "Stormax181iq/single-page-site-builder",
+    "description": "Tool to generate single-page websites from a simple configuration.",
+    "url": "https://github.com/Stormax181iq/single-page-site-builder",
+    "language": "TypeScript",
+    "stars": 0,
+    "updatedAt": "2026-01-01T00:00:00Z"
+  },
+  {
+    "name": "bip-ai-study-coach",
+    "fullName": "Stormax181iq/bip-ai-study-coach",
+    "description": "Python study assistant built during the Erasmus BIP week in Tallinn: turns course notes into study plans and quizzes with generative AI.",
+    "url": "https://github.com/Stormax181iq/bip-ai-study-coach",
+    "language": "Python",
+    "stars": 0,
+    "updatedAt": "2026-01-01T00:00:00Z"
+  }
+]

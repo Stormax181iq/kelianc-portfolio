@@ -1,0 +1,23 @@
+{
+  "name": "@kelianc/shared",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage"
+  },
+  "devDependencies": {
+    "typescript": "~5.6.3",
+    "vitest": "^3.0.0",
+    "zod": "^3.24.1",
+    "@vitest/coverage-v8": "^3.0.0"
+  },
+  "dependencies": {
+    "zod": "^3.24.1"
+  }
+}

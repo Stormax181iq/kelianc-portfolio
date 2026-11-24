@@ -1,6 +1,5 @@
-# Local development stack.
-# Phase 2 starts PostgreSQL only; the api / web / admin services are
-# added here as their apps are built (Phase 3).
+# Full local stack: PostgreSQL + API + public site + admin app.
+# Usage: cp .env.example .env (fill it yourself), then: docker compose up --build
 services:
   db:
     image: postgres:16-alpine
@@ -18,6 +17,41 @@ services:
       interval: 5s
       timeout: 3s
       retries: 10
+
+  api:
+    build:
+      context: .
+      dockerfile: apps/api/Dockerfile
+    container_name: kelianc-portfolio-api
+    env_file: .env
+    environment:
+      DB_HOST: db
+      NODE_ENV: production
+    ports:
+      - "${API_PORT:-4000}:4000"
+    depends_on:
+      db:
+        condition: service_healthy
+
+  web:
+    build:
+      context: .
+      dockerfile: apps/web/Dockerfile
+    container_name: kelianc-portfolio-web
+    ports:
+      - "${WEB_PORT:-5173}:5173"
+    depends_on:
+      - api
+
+  admin:
+    build:
+      context: .
+      dockerfile: apps/admin/Dockerfile
+    container_name: kelianc-portfolio-admin
+    ports:
+      - "${ADMIN_PORT:-4001}:4001"
+    depends_on:
+      - api
 
 volumes:
   pgdata:
