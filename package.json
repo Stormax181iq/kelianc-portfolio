@@ -1,0 +1,25 @@
+{
+  "name": "kelianc-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Personal portfolio of Kélian Chalier — PERN stack in TypeScript (PostgreSQL, Express, React, Node), Vite frontends, separate admin app.",
+  "type": "module",
+  "workspaces": [
+    "apps/api",
+    "apps/web",
+    "apps/admin",
+    "packages/shared"
+  ],
+  "scripts": {
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "migrate": "npm run migrate --workspace=apps/api",
+    "admin:create": "npm run admin:create --workspace=apps/api"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
